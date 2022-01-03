@@ -111,21 +111,19 @@ textarea {
 
 .header {
   background: var(--destaque);
-  height: 70px;
 }
 
 .header-container {
   display: flex;
   justify-content: space-between;
-  text-align: center;
+  align-items: center;
   padding: 30px 0;
-}
-
-.navbar {
-  
+  height: 80px;
+  width: 100%;
 }
 
 .brand-logo {
+  display: block;
   color: var(--primary);
   font-size: 1.3em;
 }
@@ -140,19 +138,21 @@ textarea {
   left: 0;
   right: 0;
   backdrop-filter: blur(25px);
-  margin: 40px 0;
+  background-color: var(--destaque);
   gap: 30px;
+  padding-top: 50px;
   justify-content: flex-start;
   align-items: center;
-  transition: 0.7s;
+  transition: 0.6s;
   visibility: hidden;
   overflow-y: hidden;
   z-index: 100;
+  
 }
 
 .navbar-links a {
   display: block;
-  padding: 10px;
+  padding: 10px 20px;
   color: var(--input-text);
   border-bottom: 2px solid transparent;
 }
@@ -162,12 +162,10 @@ textarea {
   border-bottom: 2px solid var(--primary);
 }
 
-.navbar-menu .active {
-  height: calc(100vh - 70px );
+.navbar.active .navbar-links {
+  height: calc(100vh - 70px);
   visibility: visible;
 }
-
-
 
 /* menu-mobile */
 
@@ -188,31 +186,30 @@ textarea {
   width: 30px;
 }
 
-.menu-burguer::before, .menu-burguer::after  {
+.menu-burguer::before,
+.menu-burguer::after {
   content: '';
   display: block;
   width: 30px;
   height: 3px;
   background: currentColor;
   margin-top: 5px;
-  transition: .3s;
+  transition: 0.3s;
   position: relative;
 }
 
-.navbar-menu.active .menu-burguer{
+.navbar.active .menu-burguer {
   border-top-color: transparent;
 }
 
-.navbar-menu.active .menu-burguer::before{
+.navbar.active .menu-burguer::before {
   transform: rotate(135deg);
 }
 
-.navbar-menu.active .menu-burguer::after{
+.navbar.active .menu-burguer::after {
   transform: rotate(-135deg);
   top: -7px;
 }
-
-
 
 /* show-case */
 
@@ -361,7 +358,7 @@ textarea {
 /* small tablet styles */
 @media screen and (min-width: 620px) {
   .header {
-    height: 120px;
+    /* height: 100px; */
     display: flex;
   }
 
@@ -371,17 +368,19 @@ textarea {
     flex-direction: row;
   }
 
-  /* .navbar-links {
+  .navbar-links {
     display: flex;
-    background: var(--destaque);
     flex-direction: row;
-    border-top: none;
-    margin-top: 0;
-    padding: 0;
-    gap: 0;
+    position: static;
+    height: auto;
+    background: var(--destaque);
+    gap: 20px;
     justify-content: space-between;
     align-items: center;
-  } */
+    transition: none;
+    visibility: visible;
+    padding-top: 0px;
+  }
 
   .btn-mobile {
     display: none;

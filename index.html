@@ -13,11 +13,18 @@
         <a class="brand-logo" href="#">Cosmo Junkie</a>
 
         <nav class="navbar">
-          <a href="#" class="btn-mobile" aria-expanded="false">
+          <a
+            href="#"
+            class="btn-mobile"
+            aria-label="Open Menu"
+            aria-haspopup="true"
+            aria-controls="navbar-links"
+            aria-expanded="false"
+          >
             <span class="menu-burguer"></span>
           </a>
 
-          <ul class="navbar-links">
+          <ul class="navbar-links" id="navbar-links" role="menu">
             <li><a href="#">About</a></li>
             <li><a href="#portfolio">Portifolio</a></li>
             <li><a href="#skills">Skills</a></li>

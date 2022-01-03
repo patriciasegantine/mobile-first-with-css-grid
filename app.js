@@ -1,18 +1,21 @@
 function menuMobile() {
   const btnMobile = document.querySelector('.btn-mobile');
-  
-  // const navbar = document.querySelector('.navbar');
 
   function toggleMenu(event) {
-    
-    const navbarMenu = document.querySelector('.navbar-menu');
+    const navbar = document.querySelector('.navbar');
+    const active = navbar.classList.contains('active');
 
     if (event.type === 'touchstart') {
       event.preventDefault();
     }
 
-    navbarMenu.classList.toggle('active');
-    event.currentTarget.setAttribute('aria-expended', 'true')
+    navbar.classList.toggle('active');
+    event.currentTarget.setAttribute('aria-expanded', active);
+    if (active) {
+      event.currentTarget.setAttribute('aria-label', 'Close Menu');
+    } else {
+      event.currentTarget.setAttribute('aria-label', 'Open Menu');
+    }
   }
 
   btnMobile.addEventListener('click', toggleMenu);
@@ -20,3 +23,16 @@ function menuMobile() {
 }
 
 menuMobile();
+
+// const linksInternos = document.querySelectorAll('.navbar-links a[href^="#"]');
+// const navbar = document.querySelector('.navbar');
+
+
+// function smoothScroll(event) {
+//   event.preventDefault()
+
+// }
+
+// linksInternos.forEach((link) => {
+//   link.addEventListener('click', smoothScroll);
+// });

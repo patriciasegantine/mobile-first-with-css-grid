@@ -1,1 +1,1 @@
-This is a responsive website using a mobile-first build (The Net Ninja Tutorial - https://www.youtube.com/watch?v=PM3XW_1RAIs&list=PL4cUxeGkcC9hH1tAjyUPZPjbj-7s200a4&index=1)
+This is a responsive website using a mobile-first build (The Net Ninja Tutorial)
